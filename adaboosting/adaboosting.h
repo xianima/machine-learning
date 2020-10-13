@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <array>
 
 using namespace std;
 
@@ -26,10 +27,12 @@ private:
     vector<Data> training_data_;
     vector<WeakClassifier> weak_;
 public:
-    Classification(int x[], int y[], int label[]);
+    Classification(int x[], int y[], int label[], int num);
+    int WeakJudge(Data &data, WeakClassifier &weak);
+    void UpdateError(WeakClassifier &weak);
     void UpdateWeight();
     void TrainWeak();
-    void TrainStrong();
+    void TrainStrong(int n_weak);
     int test(int x, int y);
 };
 
