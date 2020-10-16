@@ -7,7 +7,7 @@
 			"command": "D:\\toos\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-g",
-				"${workspaceFolder}\\*.cpp",
+				"${workspaceFolder}\\adaboosting\\*.cpp",
 				"-o",
 				"${fileDirname}\\main.exe"
 			],

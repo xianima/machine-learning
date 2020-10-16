@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <array>
+#include <cmath>
 
 using namespace std;
 
@@ -26,8 +27,10 @@ class Classification
 private:
     vector<Data> training_data_;
     vector<WeakClassifier> weak_;
+    int x_plant_;
+    int y_plant_;
 public:
-    Classification(int x[], int y[], int label[], int num);
+    Classification(int x[], int y[], int label[], int num, int x_plant, int y_plant);
     int WeakJudge(Data &data, WeakClassifier &weak);
     void UpdateError(WeakClassifier &weak);
     void UpdateWeight();
